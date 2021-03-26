@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
+import AvatarUpload from '../components/AvatarUpload';
 
 const  Home : React.FC = () => {
   return (
@@ -9,7 +10,7 @@ const  Home : React.FC = () => {
       </Head>
 
       <main >
-        <h1>Hello World</h1>
+        <AvatarUpload/>
       </main>
     </div>
   )

@@ -15,6 +15,10 @@ export default createGlobalStyle`
 body {
     background: ${props => props.theme.colors.background};
     color: ${props => props.theme.colors.text};
+
+}
+
+h1,h2{
     font-family: 'Inter', sans-serif;
 }
 
