@@ -15,7 +15,7 @@ export default createGlobalStyle`
 body {
     background: ${props => props.theme.colors.background};
     color: ${props => props.theme.colors.text};
-
+    font-size: 16px;
 }
 
 h1,h2{

@@ -24,7 +24,7 @@ const AvatarUpload: React.FC = () => {
 
   const validateFile = file => {
     const validTypes = ['image/jpeg', 'image/jpg', 'image/png', 'image/gif']
-    console.log(file.type)
+
     if (validTypes.indexOf(file.type) === -1) {
       return false
     }
@@ -40,10 +40,11 @@ const AvatarUpload: React.FC = () => {
 
     if (e.target.files.length) {
       const file = e.target.files[0]
-
+      setLogo(false)
       if (validateFile(file)) {
         setError(false)
         setEmpty(false)
+        console.log(e.target.files[0])
         setImage({
           preview: URL.createObjectURL(e.target.files[0]),
           raw: e.target.files[0],
@@ -70,10 +71,15 @@ const AvatarUpload: React.FC = () => {
     e.preventDefault()
     const file = e.dataTransfer.files
     var mimeType = file[0]
-
+    setLogo(false)
     if (validateFile(mimeType)) {
       setError(false)
       setEmpty(false)
+
+      setImage({
+        preview: URL.createObjectURL(mimeType),
+        raw: mimeType,
+      })
     } else {
       setError(true)
     }
