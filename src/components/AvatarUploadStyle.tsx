@@ -79,6 +79,29 @@ export const PhotoRetangle = styled.div`
       display: flex;
       justify-content: flex-end;
     }
+
+    .error-container {
+      padding-top: ${pixelToRem(28)};
+
+      h1 {
+        color: ${theme.colors.warn};
+        font-weight: normal;
+        font-size: ${pixelToRem(16)};
+        line-height: 180%;
+        letter-spacing: -0.02em;
+      }
+
+      a {
+        font-weight: 500;
+        font-size: ${pixelToRem(16)};
+        line-height: 180%;
+        letter-spacing: -0.02em;
+        text-decoration: none;
+        outline: none;
+        cursor: pointer;
+        color: ${theme.colors.button};
+      }
+    }
   }
 `
 
@@ -136,6 +159,20 @@ export const PhotoDiv = styled.div`
     border-radius: ${pixelToRem(57)};
     margin-bottom: 100px;
   }
+
+  svg {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: ${pixelToRem(47)};
+  }
+
+  ${props =>
+    props.error &&
+    css`
+      background-color: ${theme.colors.error};
+    `}
 `
 
 export const ButtonSave = styled.div`
