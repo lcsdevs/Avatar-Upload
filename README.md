@@ -25,3 +25,11 @@ yarn dev
 ```
 
 ## Example
+
+![example 1](https://github.com/lcsdevs/Avatar-Upload/blob/main/src/assets/componentsExample.PNG)
+
+![example 2](https://github.com/lcsdevs/Avatar-Upload/blob/main/src/assets/component2.PNG)
+
+![example 3](https://github.com/lcsdevs/Avatar-Upload/blob/main/src/assets/component3.PNG)
+
+
