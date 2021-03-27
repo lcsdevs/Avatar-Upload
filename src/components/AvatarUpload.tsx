@@ -44,7 +44,6 @@ const AvatarUpload: React.FC = () => {
       if (validateFile(file)) {
         setError(false)
         setEmpty(false)
-        console.log(e.target.files[0])
         setImage({
           preview: URL.createObjectURL(e.target.files[0]),
           raw: e.target.files[0],

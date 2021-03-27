@@ -16,35 +16,61 @@ export const BodyContent = styled.div`
 
 export const PhotoRetangle = styled.div`
   width: 100%;
-  height: ${pixelToRem(177)};
-
+  height: ${pixelToRem(250)};
   background: ${theme.colors.rectangle};
+  border-radius: ${pixelToRem(8)};
+
   ${props =>
     props.upload &&
     css`
       border: ${pixelToRem(2)} dashed #c7cdd3;
-      padding: ${pixelToRem(64)} ${pixelToRem(146)};
+      padding: ${pixelToRem(64)} ${pixelToRem(45)};
     `}
 
-  ${props =>
-    !props.upload &&
-    css`
-      padding: ${pixelToRem(30)};
-    `}
+  .photo-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-    ${props =>
-    props.logoUpload &&
-    css`
-      border: ${pixelToRem(2)} dashed #c7cdd3;
-      padding-top: ${pixelToRem(45)};
-      padding-left: ${pixelToRem(32)};
-    `}
+  .photo-grid-logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-  border-radius: ${pixelToRem(8)};
+  .close-button {
+    display: flex;
+    justify-content: flex-end;
+  }
 
   @media (min-width: 998px) {
     width: ${pixelToRem(553)};
     height: ${pixelToRem(177)};
+
+    ${props =>
+      props.upload &&
+      css`
+        border: ${pixelToRem(2)} dashed #c7cdd3;
+        padding: ${pixelToRem(64)} ${pixelToRem(146)};
+      `}
+
+    ${props =>
+      !props.upload &&
+      css`
+        padding: ${pixelToRem(30)};
+      `}
+
+    ${props =>
+      props.logoUpload &&
+      css`
+        border: ${pixelToRem(2)} dashed #c7cdd3;
+        padding-top: ${pixelToRem(45)};
+        padding-left: ${pixelToRem(32)};
+      `}
+
 
     .photo-grid {
       display: grid;
@@ -73,11 +99,6 @@ export const PhotoRetangle = styled.div`
       display: flex;
       justify-content: flex-end;
       margin-top: ${pixelToRem(8)};
-    }
-
-    .close-button {
-      display: flex;
-      justify-content: flex-end;
     }
 
     .error-container {
