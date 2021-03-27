@@ -67,7 +67,6 @@ export const PhotoRetangle = styled.div`
       props.logoUpload &&
       css`
         border: ${pixelToRem(2)} dashed #c7cdd3;
-        padding-top: ${pixelToRem(45)};
         padding-left: ${pixelToRem(32)};
       `}
 
