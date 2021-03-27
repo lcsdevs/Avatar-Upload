@@ -26,6 +26,10 @@ yarn dev
 
 ## Example
 
+<p align="center">
+  <img src="https://github.com/lcsdevs/Avatar-Upload/blob/main/src/assets/componentsExample.PNG" />
+</p>
+
 ![example 1](https://github.com/lcsdevs/Avatar-Upload/blob/main/src/assets/componentsExample.PNG)
 
 ![example 2](https://github.com/lcsdevs/Avatar-Upload/blob/main/src/assets/component2.PNG)
